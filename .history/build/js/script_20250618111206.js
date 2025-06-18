@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
- //footer year update
+
 document.addEventListener("DOMContentLoaded", function() {
     const yearSpan = document.getElementById("footer-year");
     if (yearSpan) {
