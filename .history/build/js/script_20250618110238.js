@@ -103,23 +103,12 @@ document.getElementById('contactForm').addEventListener('submit', async function
     subject: form.subject.value,
     message: form.message.value
   };
-  try {
-    const response = await fetch('/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
+  const response = await fetch('/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
   const result = await response.json();
-    if (result.success) {
-      document.getElementById('formResponse').textContent = "Message sent successfully!";
-      document.getElementById('formResponse').style.color = "green";
-      form.reset();
-    } else {
-      document.getElementById('formResponse').textContent = "Failed to send message.";
-      document.getElementById('formResponse').style.color = "red";
-    }
-  } catch (error) {
-    document.getElementById('formResponse').textContent = "Failed to send message.";
-    document.getElementById('formResponse').style.color = "red";
-  }
+  document.getElementById('formResponse').textContent = result.message;
+  if(result.success) form.reset();
 });
