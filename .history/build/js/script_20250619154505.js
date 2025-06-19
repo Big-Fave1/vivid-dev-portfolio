@@ -1,5 +1,5 @@
+console.log("form script loaded");
 
-//theme change...
 const dayNight = document.querySelector(".day-night");
 dayNight.addEventListener("click", () =>{
     dayNight.querySelector("i").classList.toggle("fa-sun");
@@ -18,7 +18,7 @@ window.addEventListener("load", () =>{
 })
 
 
-// ...nav toggle...
+// ...existing code...
 
 document.addEventListener("DOMContentLoaded", function() {
     const navToggler = document.querySelector('.nav-toggler');
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
  //footer year update
 document.addEventListener("DOMContentLoaded", function() {
     const yearSpan = document.getElementById("footer-year");
@@ -45,35 +44,33 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// ...contact form submission...
+// ...existing code...
 
-    document.getElementById("myForm").addEventListener("submit", submitForm);
-
-    function submitForm(event) {
-      event.preventDefault();
-      var formData = new FormData(event.target);
-      var formObject = {};
-      formData.forEach(function(value, key) {
-        formObject[key] = value;
-      });
-
-      fetch(
-        "https://script.google.com/macros/s/AKfycbzORS5Q7zgWjETNDUd6bhZ2d8VpP5u0HfO7Dw_1QSrdQQPk-0JwaJlVq3vQn6CPSh8/exec",
-        {
-          method: "POST",
-          body: JSON.stringify(formObject),
-        }
-      )
-      .then(res => {
-        if (res.ok) {
-          alert("Hello, you've successfully subscribed to our newsletter");
-        } else {
-          // Handle error if needed
-        }
-      })
-      .catch(err => console.log(err));
-
-      event.target.reset();
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    subject: form.subject.value,
+    message: form.message.value
+  };
+   try {
+    const response = await fetch('http://localhost:3000/contact', { 
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await response.json();
+    if (result.success) {
+      document.getElementById('formResponse').textContent = "Message sent successfully!";
+      document.getElementById('formResponse').style.color = "green";
+      form.reset();
+    } else {
+      document.getElementById('formResponse').textContent = "Failed to send message.";
+      document.getElementById('formResponse').style.color = "red";
     }
-
-
+  } catch (error) {
+    document.getElementById('formResponse').textContent = "Failed to send message.";
+    document.getElementById('formResponse').style.color = "red";
+  }
+});
