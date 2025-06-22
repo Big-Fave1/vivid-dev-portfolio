@@ -28,7 +28,6 @@ body
     font-family: 'Poppins'sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 *
@@ -371,8 +370,6 @@ h3.my-profession
     font-size: 16px;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
-    overflow-x: auto;
-    max-width: 100%;
 }
 .about .about-content .personal-info .info-item p span
 {
@@ -380,11 +377,6 @@ h3.my-profession
     color: var(--text-black-700);
     margin-left: 4px;
     display: inline-block;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    vertical-align: bottom;
-    overflow-wrap: break-word;
-    white-space: nowrap;
 }
 .about .about-content .personal-info .info-item
 {
