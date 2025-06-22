@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
     event.preventDefault();
     //Fetch API For contact submission//
     fetch(
-        "https://script.google.com/macros/s/AKfycbzTfWF0HO7HN5oj8ZrAjoRMiUQWxe2rLaaAv-JFqk57GOgJfC-kEEkwiwcSwRxdJFI5/exec",
+        "https://script.google.com/macros/s/AKfycbzkdnMMrjdC7JSaFJu5cUvDVsE77MFKO58HJfsVIChockgcamUJiKCE5NJhbaF94w/exec",
         {
           method: "POST",
           headers: {

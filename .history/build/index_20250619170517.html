@@ -333,7 +333,7 @@
                     <!--- ==== Contact info item End ==== --->
                 </div>
                 <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-                <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
+                <h4 class="contact-sub-title padd-15">I'M AT VERY RESPONSIVE TO MESSAGES</h4>
                 <!-- ==== Contact Form ==== -->
                  <div class="row">
                     <form id="myForm" class="contact-form padd-15">
@@ -352,6 +352,13 @@
     <div class="row">
         <div class="form-item col-12 padd-15">
             <div class="form-group">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-item col-12 padd-15">
+            <div class="form-group">
                 <textarea name="message" class="form-control" placeholder="Message" required></textarea>
             </div>
         </div>
@@ -364,7 +371,7 @@
 </form>
 <!---=== Success Popup start ====-->
 <div class="overlay" id="overlay"></div>
-<div class="success-popup padd-15" id="successPopup">
+<div class="success-popup" id="successPopup padd-15">
     <i class="fas fa-check-circle"></i>
     <h3>Message Sent Sucessfully</h3>
     <p>Thank you for reaching out. I'll get back to you soon</p>
@@ -377,32 +384,28 @@
     </div>
     <!--- ====main container End === -->
 
-     <!--- ===== footer start ===== --->
-    <footer class="footer">
-  <section class="footer-section">
-    <div class="container">
-      <div class="row footer-row">
-        <div class="footer-logo" padd-15>
-          <a href="#"><img src="img/vivid white.png" alt=""></a>
+     <!--- ===== JS Files ===== --->
+     <footer class="footer">
+    <section class="footer-section">
+         <div class="container">
+                <div class="row footer-row">
+                    <div class="footer-logo" padd-15>
+        <a href="#"><img src="img/vivid white.png" alt=""></a>
         </div>
         <div class="row footer-row">
-          <section class="social-section">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-whatsapp"></i>
-            <i class="fab fa-twitter"></i>
-          </section>
+            <section class="social-section">
+                <i class="fab fa-facebook"></i>
+                 <i class="fab fa-instagram"></i>
+                 <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-twitter"></i>
+             </section>
         </div>
         <div class="footer-copyright" style="text-align:center; margin-top: 10px;">
-          &copy; <span id="footer-year"></span> Vivid Dev. All rights reserved.
+            &copy; <span id="footer-year"></span> Vivid Dev. All rights reserved.
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 </footer>
-  <!--- ===== footer end ===== --->
-  
-  <!--- ===== JS files ===== --->
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>

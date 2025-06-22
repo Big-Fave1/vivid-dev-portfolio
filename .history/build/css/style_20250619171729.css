@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root
@@ -26,8 +27,6 @@ body
     line-height:1.5;
     font-size:16px;
     font-family: 'Poppins'sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 *
@@ -64,10 +63,8 @@ body
     height: 100px;
 }
 .header-logo img {
-    height: 100px;
+    height: 100%;
     width: auto;
-    max-width: 80px;
-    object-fit: contain;
 }
 .nav-toggler {
     height: 40px;
@@ -720,75 +717,21 @@ h3.my-profession
     display: none;
 }
 
-.dark .success-popup 
-{
-    background:#330000eb ;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
 .success-popup i
 {
     font-size: 3rem;
     color: #4CAF50;
     margin-bottom: 1rem;
 }
-
-.success-popup h3
-{
-margin-bottom: 1rem;
-}
-
-.success-popup button
-{
-background: var(--skin-color);
-color: white;
-padding: 0.8rem 1.5rem;
-border: none;
-border-radius: 5px;
-font-size: 1rem;
-cursor: pointer;
-transition: all 0.3s ease;
-}
-
-.success-popup button:hover
-{
-    background: #e10202a8;
-}
-
-.overlay
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    display: none;
-}
-
-/* footer*/
-.footer
-{
-    width: 100%;
-    position: relative;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    box-sizing: border-box;
-    background: #222;
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .footer-logo
 {
     flex: 0 0 auto;
-    margin-left: 20px; /* reduced from 50px */
-}
-.footer-logo img {
-    height: 100px; /* Make the footer logo big */
-    width: auto;
-    max-width: 120px;
-    object-fit: contain;
+    margin-left: 50px;
 }
 .social-section {
     display: flex;
@@ -799,17 +742,15 @@ transition: all 0.3s ease;
 {
     display: inline-block;
     color: #f2f2fc;
-    letter-spacing: 8px;
-    font-size:18px;
+    letter-spacing: 20px;
+    font-size:20px;
 }
 .footer-copyright
 {
     color: #f2f2fc;
     font-family:'poppins' sans-serif;
-    margin-top: 4px !important; /* reduce space above copyright */
 }
 
-/* Responsive design*/
 @media (max-width:1199px)
 {
      .main-header
@@ -847,8 +788,8 @@ transition: all 0.3s ease;
         gap: 8px; 
         display: flex;
     }
-    
     .footer-row {
+        display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
@@ -857,9 +798,9 @@ transition: all 0.3s ease;
         letter-spacing: 15px; 
     }
 }
-.footer
+.footer .footer-section
 {
-    background: #ec1839;
+    background-color: #ec1839;
 }
 @media (max-width:991px)
 {
@@ -1028,19 +969,21 @@ transition: all 0.3s ease;
     }
      .footer-logo
     {
-        margin-left: 0;
-        margin-bottom: 10px;
+        flex: 0 0 auto;
+        margin-left: 5px;
     }
     .social-section {
         gap: 8px; 
         display: flex;
     }
     .footer-row {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
     .footer .footer-section i {
-        font-size: 14px;
-        letter-spacing: 4px; 
+        font-size: 20px;
+        letter-spacing: 15px; 
     }
 }
 @media (max-width:320px)

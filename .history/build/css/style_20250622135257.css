@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root
@@ -26,8 +27,6 @@ body
     line-height:1.5;
     font-size:16px;
     font-family: 'Poppins'sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 *
@@ -64,10 +63,8 @@ body
     height: 100px;
 }
 .header-logo img {
-    height: 100px;
+    height: 100%;
     width: auto;
-    max-width: 80px;
-    object-fit: contain;
 }
 .nav-toggler {
     height: 40px;
@@ -769,26 +766,26 @@ transition: all 0.3s ease;
 /* footer*/
 .footer
 {
-    width: 100%;
+     width: 100%;
     position: relative;
     left: 0;
-    right: 0;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: 0;
     box-sizing: border-box;
+    padding: 20px 0;
+    color: red;
+    z-index: 10;
     background: #222;
+}
+.footer-row {
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 .footer-logo
 {
     flex: 0 0 auto;
-    margin-left: 20px; /* reduced from 50px */
-}
-.footer-logo img {
-    height: 100px; /* Make the footer logo big */
-    width: auto;
-    max-width: 120px;
-    object-fit: contain;
+    margin-left: 50px;
 }
 .social-section {
     display: flex;
@@ -806,7 +803,6 @@ transition: all 0.3s ease;
 {
     color: #f2f2fc;
     font-family:'poppins' sans-serif;
-    margin-top: 4px !important; /* reduce space above copyright */
 }
 
 /* Responsive design*/
@@ -1036,7 +1032,7 @@ transition: all 0.3s ease;
         display: flex;
     }
     .footer-row {
-        flex-direction: column;
+       flex-direction: column;
     }
     .footer .footer-section i {
         font-size: 14px;
