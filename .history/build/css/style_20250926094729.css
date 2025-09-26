@@ -783,16 +783,20 @@ transition: all 0.3s ease;
 .footer
 {
     width: 100%;
-    position: relative;
+    position: fixed;
     left: 0;
-    right: 0;
+    bottom: 0;
     margin: 0;
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
     background: var(--skin-color);
+    min-height: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
 }
-.footer-logo a
+.footer-logo
 {
     flex: 0 0 auto;
     margin-left: 20px;

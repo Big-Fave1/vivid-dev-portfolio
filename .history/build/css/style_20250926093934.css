@@ -59,11 +59,11 @@ body
     padding: 0 30px;
 }
 
-.header-logo a{
+.header-logo {
     display: flex;
     align-items: flex-end;
     align-self: flex-end;
-    height: 20px;
+    height: 70px;
     font-family: 'clicker script', cursive;
     max-width: 80px;
     object-fit: contain;
@@ -792,7 +792,7 @@ transition: all 0.3s ease;
     box-sizing: border-box;
     background: var(--skin-color);
 }
-.footer-logo a
+.footer-logo
 {
     flex: 0 0 auto;
     margin-left: 20px;
